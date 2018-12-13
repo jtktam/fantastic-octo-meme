@@ -9,10 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''echo PATH = ${PATH}
-echo M2_HOME = ${M2_HOME}
-
-mvn clean
+        sh '''mvn clean
 mvn compile'''
       }
     }
